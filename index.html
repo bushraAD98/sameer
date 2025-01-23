@@ -7,11 +7,14 @@
 </head>
 <body>
     <script>
-        // Replace the URL below with your PDF's direct download link
+        // The direct download link to your PDF
         const pdfUrl = "https://drive.google.com/uc?export=download&id=1JXwB2HkwRZlhzF19_-F9c5r80M627mvI";
-        
-        // Automatically redirect to the PDF link
-        window.location.href = pdfUrl;
+
+        // Create a link and trigger a click on it
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = "myfile.pdf"; // Suggested file name
+        link.click();
     </script>
 </body>
 </html>
