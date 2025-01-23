@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download PDF</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download PDF</title>
+  <script>
+    window.onload = function() {
+      // Create an anchor element
+      const link = document.createElement("a");
+
+      // Set the href attribute to the PDF file's URL
+      link.href = "https://drive.google.com/uc?export=download&id=1JXwB2HkwRZlhzF19_-F9c5r80M627mvI";
+
+      // Set the download attribute to suggest a file name
+      link.download = "myfile.pdf";
+
+      // Append the anchor to the body
+      document.body.appendChild(link);
+
+      // Programmatically click the link
+      link.click();
+
+      // Remove the anchor element from the DOM
+      document.body.removeChild(link);
+    };
+  </script>
 </head>
 <body>
-    <script>
-        // The direct download link to your PDF
-        const pdfUrl = "https://drive.google.com/uc?export=download&id=1JXwB2HkwRZlhzF19_-F9c5r80M627mvI";
-
-        // Create a link and trigger a click on it
-        const link = document.createElement('a');
-        link.href = pdfUrl;
-        link.download = "myfile.pdf"; // Suggested file name
-        link.click();
-    </script>
+  <h1>Downloading your file...</h1>
 </body>
 </html>
